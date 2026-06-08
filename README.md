@@ -63,8 +63,8 @@ docker compose version
 ### Шаг 2: Клонирование репозитория
 
 ```bash
-git clone https://github.com/your-username/effective-mobile-test.git
-cd effective-mobile-test
+git clone https://github.com/VyacheslavPerebora/effective-mobile-devops-task.git
+cd effective-mobile-devops-task
 ```
 
 ### Шаг 3: Настройка переменных окружения
