@@ -1,4 +1,4 @@
-# Effective Mobile Test
+# Effective Mobile DevOps Task
 
 > Простое веб-приложение с Python backend и Nginx reverse proxy, развернутое в Docker-контейнерах
 
