@@ -232,7 +232,8 @@ effective-mobile-devops-task/
 ├── nginx/
 │   ├── .dockerignore           # Игнорируемые файлы для сборки nginx образа
 │   ├── Dockerfile              # Образ Nginx с поддержкой переменных окружения
-│   └── nginx.conf.template     # Шаблон конфигурации reverse proxy с переменными
+│   ├── nginx.conf              # Основная конфигурация Nginx
+│   └── nginx.conf.template     # Шаблон сервера reverse proxy с переменными
 │
 ├── docker-compose.yml          # Оркестрация Docker сервисов
 │
