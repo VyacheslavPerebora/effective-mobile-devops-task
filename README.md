@@ -80,7 +80,8 @@ cp .env.example .env
 ```env
 BACKEND_PORT=8080
 NGINX_HOST_PORT=80
-NETWORK_NAME=effective-mobile-network
+BACKEND_SERVICE=backend
+NETWORK_NAME=eldabaof-mobile-network
 LOG_LEVEL=info
 ```
 
@@ -166,7 +167,7 @@ Nginx is healthy
 ### 3. Проверка healthcheck backend
 
 ```bash
-curl http://localhost/nginx-health
+curl http://localhost/health
 ```
 
 **Ожидаемый результат:**
@@ -221,25 +222,25 @@ OK
 ## 📁 Структура проекта
 
 ```
-effective-mobile-test/
+effective-mobile-devops-task/
 │
 ├── backend/
-│   ├── Dockerfile              # Образ Python HTTP-сервера
-│   └── app.py                  # Код приложения (stdlib only)
+│   ├── .dockerignore           # Игнорируемые файлы для сборки backend образа
+│   ├── app.py                  # Код Python приложения (stdlib only)
+│   └── Dockerfile              # Образ Python HTTP-сервера
 │
 ├── nginx/
-│   ├── Dockerfile              # Образ Nginx с кастомной конфигурацией
-│   └── nginx.conf              # Конфигурация reverse proxy
+│   ├── .dockerignore           # Игнорируемые файлы для сборки nginx образа
+│   ├── Dockerfile              # Образ Nginx с поддержкой переменных окружения
+│   └── nginx.conf.template     # Шаблон конфигурации reverse proxy с переменными
 │
-├── docker-compose.yml          # Оркестрация сервисов
+├── docker-compose.yml          # Оркестрация Docker сервисов
 │
-├── .env                        # Переменные окружения (не в Git)
-├── .env.example                # Шаблон .env
+├── .env                        # Переменные окружения (не коммитится в Git)
+├── .env.example                # Шаблон переменных окружения
 │
-├── .gitignore
-├── .dockerignore
-│
-└── README.md                   # Документация
+├── .gitignore                  # Игнорируемые файлы для Git
+└── README.md                   # Документация проекта
 ```
 
 ---

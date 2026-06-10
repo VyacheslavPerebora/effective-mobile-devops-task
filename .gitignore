@@ -2,9 +2,6 @@
 .env
 .env.local
 
-# Docker
-.dockerignore
-
 # Python cache
 __pycache__/
 *.pyc

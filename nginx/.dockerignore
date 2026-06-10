@@ -1,0 +1,17 @@
+# Nginx logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# IDE (keep basic)
+.vscode/
+.idea/
+
+# OS files (most common)
+.DS_Store
+Thumbs.db
+
+# Git
+.git/

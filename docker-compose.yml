@@ -50,6 +50,9 @@ services:
     env_file:
       - .env
     
+    environment:
+      - BACKEND_SERVICE=backend
+    
     restart: unless-stopped
     
     # Используем 127.0.0.1 чтобы гарантировать IPv4 и избежать возможных проблем с IPv6 (::1)
