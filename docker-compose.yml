@@ -51,7 +51,8 @@ services:
       - .env
     
     environment:
-      - BACKEND_SERVICE=backend
+      - BACKEND_SERVICE=${BACKEND_SERVICE:-backend}
+      - BACKEND_PORT=${BACKEND_PORT:-8080}
     
     restart: unless-stopped
     
