@@ -14,7 +14,7 @@ server {
 
     
     location / {
-        proxy_pass http://${BACKEND_SERVICE};
+        proxy_pass http://backend;
         
         # 1. исходный заголовок Host из запроса клиента
         proxy_set_header Host $host;
